@@ -26,4 +26,5 @@ Passo a passo instalação projeto e configuração Django.
 2- gerar o link do site: python manage.py runserver
     2.1 - python manage.py runserver 0.0.0.0:8000
         -> gerar o link para ip da máquina local
+3- django-admin startapp filme
 
