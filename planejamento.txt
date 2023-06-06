@@ -1,0 +1,29 @@
+- Homepage
+
+- Fazer Login e Criar Conta (Usuário e Autenticação)
+    - Email
+    - Username
+    - Senha
+    - Filmes já vistos
+    - Editar Perfil
+
+- Filmes/Séries
+    - thumb
+    - titulo
+    - descrição
+    - categoria
+    - quantidade de views
+    - data da criação
+    - Episodio
+        - videos
+        - titulo
+     
+- Barra de Pesquisa
+
+Passo a passo instalação projeto e configuração Django.
+
+1- django-admin startproject nome_projeto .
+2- gerar o link do site: python manage.py runserver
+    2.1 - python manage.py runserver 0.0.0.0:8000
+        -> gerar o link para ip da máquina local
+
