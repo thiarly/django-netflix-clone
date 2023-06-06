@@ -161,4 +161,7 @@ cython_debug/
 
 # Vscode
 .vscode/
+vscode/
+settings.json
+.settings.json
 
