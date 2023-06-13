@@ -36,6 +36,8 @@ https://docs.djangoproject.com/en/4.2/ref/django-admin/
     5.1- python manage.py createsuperuser
 6- Conectando o app filme ao project interflix
 
+7- Sempre que criar um página precisa construir:
+    7.1- url - view - template
 
 
 
