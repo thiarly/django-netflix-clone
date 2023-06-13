@@ -18,7 +18,12 @@ class Filme(models.Model):
     descricao = models.TextField(max_length=1500)
     categoria = models.CharField(max_length=100, choices=LISTA_CATEGORIAS)
     quantidade_views = models.IntegerField(default=0)
+    classificacao = models.IntegerField(default=0)
     data_criacao = models.DateTimeField(default=timezone.now)
+   
+    def __str__(self):
+        return self.titulo
+    
         
     # - Filmes/Séries
     # - thumb
