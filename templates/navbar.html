@@ -1,0 +1,35 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+<nav class="w-full flex justify-between items-center py-3 px-4 fixed z-50">
+    <div class="w-4/12">
+        <a href="#">
+            <img class="w-4/12 rounded-md" src="{% static 'images/igbr.png' %}">   
+        </a>
+
+    </div>
+    <div class="w-6/12 flex flex-nowrap justify-end">
+        <div class="mr-2">
+            <form>
+                <input type="text" class="py-1 px-2 rounded-md text-black" placeholder="Pesquisar...">
+            </form>
+        
+        </div>
+        <div class="mr-2">
+            <a href="#">
+                <button class="railway-button py-1 px-3 rounded-md">
+                    Login
+                </button>
+            </a>
+        </div>
+        <div class="mr-2">
+            <a href="#">
+                <button class="railway-button py-1 px-3 rounded-md">
+                    Editar Perfil
+                </button>
+            </a>
+        </div>
+
+    </div>
+
+</nav>
