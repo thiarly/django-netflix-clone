@@ -20,11 +20,15 @@
   
 </head>
 
-<body class="bg-gradient font-primary">
+<body class="bg-black font-primary">
     {% include 'navbar.html' %}
     <h1 class="flex justify-center items-center">Interflix</h1>
     {% block content %} 
     {% endblock %}
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> <!-- importação de icons -->
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> <!-- importação de icons -->
+
 </body>
 
 </html>
