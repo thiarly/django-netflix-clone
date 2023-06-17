@@ -5,5 +5,13 @@ HomeFilmes InterFlix
 {% endblock %}
 
 {% block content %}
-<h1>Essa é a nossa homefilmes</h1>
+    <div class="py-16">
+        <h1>Essa é a nossa homefilmes</h1>
+            {% for filme in lista_filmes %}
+            <hr>
+                <p>{{filme}}</p>
+                <p>{{filme.descricao}}</p>
+                <img src="{{filme.thumb.url}}">
+            {% endfor %}
+    </div>
 {% endblock %}
