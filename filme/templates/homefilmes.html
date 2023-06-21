@@ -7,7 +7,7 @@ HomeFilmes InterFlix
 {% block content %}
     <div class="py-16">
         <h1>Essa é a nossa homefilmes</h1>
-            {% for filme in lista_filmes %}
+            {% for filme in object_list %}
             <hr>
                 <p>{{filme}}</p>
                 <p>{{filme.descricao}}</p>
