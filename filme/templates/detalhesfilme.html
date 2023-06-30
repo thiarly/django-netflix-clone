@@ -9,8 +9,10 @@ HomeFilmes InterFlix
         <h1>Essa é o detalhe do filme: {{ object.titulo }}</h1>
            <p>{{ object }}</p>
         <p>{{ object.descricao }}</p>
-              <img class="h-full mx-auto p-4 flex items-center" src="{{ object.thumb.url }}">
+              <img class="h-screen mx-auto p-4 flex items-center" src="{{ object.thumb.url }}">
     </div>
+
+
 {% endblock %}
 
 <!-- h-0	height: 0px;
