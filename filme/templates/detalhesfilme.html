@@ -10,6 +10,14 @@ HomeFilmes InterFlix
            <p>{{ object }}</p>
         <p>{{ object.descricao }}</p>
               <img class="h-screen mx-auto p-4 flex items-center" src="{{ object.thumb.url }}">
+
+        <h2>Episódios</h2>
+        {% for episodio in object.episodios.all %}
+            <a href="{{ episodio.video }}">
+                
+                <p>Episódio {{forloop.counter}}: {{ episodio.titulo }}</p>
+            </a>
+        {% endfor %}
     </div>
 
 
