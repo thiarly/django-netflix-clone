@@ -19,7 +19,17 @@ HomeFilmes InterFlix
             </a>
         {% endfor %}
     </div>
-
+    <div class="py-10">
+        <h2 class="py-6">Filmes Relacionados:</h2>
+        {% for filme in filmes_relacionados %}
+        
+        <p >
+            <a href="{% url 'filme:detalhesfilme' filme.pk %}">
+            {{ filme.titulo }}
+            </a>
+        </p>
+        {% endfor %}
+    </div>
 
 {% endblock %}
 
@@ -31,3 +41,4 @@ h-1.5	height: 0.375rem; /* 6px */
 h-2	height: 0.5rem; /* 8px */
 h-2.5	height: 0.625rem; /* 10px */
 h-3	height: 0.75rem; /* 12px */ -->
+
