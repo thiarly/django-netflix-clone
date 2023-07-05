@@ -31,5 +31,8 @@
         "Séries",
         "titulo",
         "usuário"
-    ]
+    ],
+    "css.validate": false
+    
 }
+
