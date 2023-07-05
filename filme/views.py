@@ -28,6 +28,12 @@ class Detalhesfilme(DetailView):
     template_name = 'detalhesfilme.html'
     model = Filme
     # object -> objeto do model Filme
+    
+    def get(self, request, *args, **kwargs):
+        filme = self.get_object()
+        filme.quantidade_views += 1
+        filme.save()
+        return super().get(request, *args, **kwargs) #retorna o get da classe pai
      
     def get_context_data(self, **kwargs):
         context = super(Detalhesfilme, self).get_context_data(**kwargs)
