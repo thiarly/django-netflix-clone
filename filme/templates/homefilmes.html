@@ -14,4 +14,14 @@ HomeFilmes InterFlix
                 <img src="{{filme.thumb.url}}">
             {% endfor %}
     </div>
+
+    <div>
+        <h2 class="p-10">Novo</h2>
+        {{lista_filmes_recentes}} 
+    </div>
+
+    <div>
+        <h2 class="p-10">Em Alta</h2>
+        {{lista_filmes_emalta}} 
+    </div>
 {% endblock %}
