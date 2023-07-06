@@ -33,6 +33,8 @@ class Detalhesfilme(DetailView):
         filme = self.get_object()
         filme.quantidade_views += 1
         filme.save()
+        usuario= request.user
+        usuario.filmes_vistos.add(filme)
         return super().get(request, *args, **kwargs) #retorna o get da classe pai
      
     def get_context_data(self, **kwargs):
