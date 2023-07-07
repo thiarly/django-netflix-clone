@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=y8!rkd_@5_!5#ta!fwno1k48yfvl(84ow9qa#kt@&r^8ov#19
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '172.16.100.108', '192.168.0.3']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -85,6 +86,16 @@ DATABASES = {
     }
 }
 
+import dj_database_url
+import os
+
+DATABASES_URL = os.getcwd("DATABASE_URL")
+if DATABASES_URL:
+    DATABASES ={
+        'default': dj_database_url.config(default=DATABASES_URL, conn_max_age=1800)
+    }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -123,6 +134,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
