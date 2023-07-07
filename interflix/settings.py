@@ -89,9 +89,9 @@ DATABASES = {
 import dj_database_url
 import os
 
-DATABASES_URL = os.getcwd("DATABASE_URL")
+DATABASES_URL = os.getenv("DATABASE_URL")
 if DATABASES_URL:
-    DATABASES ={
+    DATABASES = {
         'default': dj_database_url.config(default=DATABASES_URL, conn_max_age=1800)
     }
 
