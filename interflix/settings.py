@@ -33,7 +33,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://django-netflix-clone-production.up.railway.app/", "localhost", "172.16.100.108", "192.168.0.3"]
+ALLOWED_HOSTS = ["django-netflix-clone-production.up.railway.app", "localhost", "172.16.100.108", "192.168.0.3"]
 
 
 # Application definition
