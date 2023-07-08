@@ -35,10 +35,13 @@
         "quantidade",
         "relacionados",
         "retorna",
+        "senha",
+        "SENHA",
         "Séries",
         "termo",
         "titulo",
-        "usuário"
+        "usuário",
+        "usuarios"
     ],
     "css.validate": false
     
