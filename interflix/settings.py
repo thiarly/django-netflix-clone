@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +21,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=y8!rkd_@5_!5#ta!fwno1k48yfvl(84ow9qa#kt@&r^8ov#19'
+
+TOKEN_CSRF = os.getenv('TOKEN_CSRF')
+
+if TOKEN_CSRF:
+    TOKEN_CSRF = TOKEN_CSRF
+    CRSF_TRUSTED_ORIGINS = ['https://django-netflix-clone-production.up.railway.app/']
+else:
+    SECRET_KEY = 'django-insecure-=y8!rkd_@5_!5#ta!fwno1k48yfvl(84ow9qa#kt@&r^8ov#19'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://django-netflix-clone-production.up.railway.app/", "localhost", "172.16.100.108", "192.168.0.3"]
 
 
 # Application definition
@@ -87,7 +95,7 @@ DATABASES = {
 }
 
 import dj_database_url
-import os
+
 
 DATABASES_URL = os.getenv("DATABASE_URL")
 if DATABASES_URL:
