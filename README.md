@@ -11,6 +11,7 @@ O projeto está hospedado no Railway e pode ser acessado [aqui](https://django-n
 - Django
 - Python
 - HTML/CSS
+- Tailwindcss
 
 ## Estrutura do projeto
 
