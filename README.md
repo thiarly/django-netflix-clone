@@ -1,5 +1,8 @@
 # Django Netflix Clone
 
+<img width="1415" alt="Screenshot 2023-09-21 at 09 34 09" src="https://github.com/thiarly/django-netflix-clone/assets/13594903/d1a346ed-d84e-42c0-b8a1-35b4b9df2128">
+
+
 ## Descrição do Projeto
 
 Este projeto é um clone do Netflix, construído com Django. O objetivo é replicar as principais funcionalidades do Netflix, incluindo a visualização de filmes e episódios, além de funcionalidades de usuário, como criar conta e login.
